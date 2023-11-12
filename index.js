@@ -1,3 +1,0 @@
-function theme(){
-	if (f) {}
-}
