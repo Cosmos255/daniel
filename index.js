@@ -1,7 +1,8 @@
-  let name ;
+  let username ;
   let age ;
   let email;
   let password;
+  
   
 
 
@@ -26,34 +27,48 @@
 
 
    document.getElementById("regbutton").onclick = function(){
-    name = document.getElementById("name").value;
-    age = 2023 - document.getElementById("year").value;
-    email = document.getElementById("email").value;
+    username = document.getElementById("name").value;
+    age = document.getElementById("year").value;
+    email = document.getElementById("email").value; 
     password = document.getElementById("password").value;
-    window.location.assign("https://cosmos255.github.io/daniel/");
+    age = 2023 - age;
+    console.log(username);
+   
+   
+    if((!username)  || (!email) || (!password) || (age < 10 || age > 120 )){
+      console.log("Error all the rows need to be filled ");
+     }else {
     console.log("it worked");
-    console.log(name);
-    console.log(age);
-    console.log(email);
-    console.log(password);
-   
-   }
+    console.log(username);
+   console.log( age );
+   console.log( email);
+   console.log( password);
+    window.location.assign("https://cosmos255.github.io/daniel/index.html");
+  
+    }
 
    
+    if(!username){
+      window.alert("You need to put a username ");
+    }
 
+    else if(!email){
+      window.alert("You need to put a eamil ");
+    }
 
-   if(name == null){
-    document.getElementById("p1").innerHTML = "Salut ";
-    console.log("nullname");
-   }
+    else if(!password){
+      window.alert("You need to put a password ");
+    }
 
+    else if(age < 10){
+      window.alert("You are too young ");
+    }
 
+    else if(age > 120){
+      window.alert("You are dead :P ")
+    }
 
-   if(age == null){
-    document.getElementById("p2").innerHTML = null;
-    console.log("nullage")
-   }
-
+  }
 
 
    if(window.location.href == 'https://cosmos255.github.io/daniel/log_in.html'){
@@ -63,5 +78,5 @@
 
 
 
-   document.getElementById("p1").innerHTML = "Salut " + name;
-   document.getElementById("p2").innerHTML = "Ai varsta de " + age;
+   //document.getElementById("p1").innerHTML = "Salut " + name;
+   //document.getElementById("p2").innerHTML = "Ai varsta de " + age ;
