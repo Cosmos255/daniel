@@ -1,53 +1,52 @@
+
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Cosmosplace</title>
-	<link rel="stylesheet" href="index1.css"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Cosmosplace</title>
 </head>
+<body id="login">
+  
 
 
- <body id="body1">
+<header>
 
- <header>
-  <div class="topnav" id="myTopnav">
-    <a  href="index.html" class="active">Home</a>
-    <a href="news.html" >News</a>
-    <a href="contacs.html">Contact</a>
-    <a href="about.html">About</a>
-    <div class="dropdown">
-        <button class ="dropbtn">Theme<i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <button onclick="dark()">Dark</button>
-          <button onclick="classic()">Classic</button>
-        </div>   
-     </div>
-  </div>
-  </header>
-
- <main>
-      <div class="text1" id="text1">
-      <h>Welcome, Learn more about this project</h>
-      </div>
+</header>
 
 
-      <div class="box1">
-       <p id="p1"></p>
-       <p id="p2"></p>
-      </div>
-    </main>
+<main>
+  
 
- <footer>
-    <p>This is a project please dont copy it</p>
-    <p>I am serious</p>
-    <p>Else Duo will come after you :P</p>
-    <p>Hosted by Github</p>
-    <p>Made by Cosmos</p>
-    </footer>
+
+    <div class="wrapper">
+      <form class="formcn">
+        <h2>Register</h>
+       <input type="text" placeholder="Name" id="name"></input>
+       <input  type="text" placeholder="Email" id="email"></input>
+       <input  type="password" placeholder="password" id="password"></input>
+       <input type="number" id="year" placeholder="date of birth"></input>
+       <button id="regbutton" type="button" >Register</button>
+       <p>Already have an account? <a href="#Login">Login</a></p>
+      </form>
+    </div>
+
+</main> 
+
+
+<footer>
+</footer>
 
 <script type="text/javascript" src="index.js"></script>
 </body>
-
 </html>
+
+<?php
+ $_SESSION["username"] = "Daniel"
+
+?>
