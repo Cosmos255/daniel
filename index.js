@@ -43,7 +43,7 @@
    console.log( age );
    console.log( email);
    console.log( password);
-    window.location.assign("https://cosmos255.github.io/daniel/index.html");
+    window.location.assign("https://cosmos255.github.io/daniel/home.html");
   
     }
 
