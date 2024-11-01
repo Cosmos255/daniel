@@ -1,8 +1,51 @@
-  let username ;
+async function fetchLiveText(){
+    const livetext = document.getElementById("text1");
+    let url = "https://radiozu.ro/trackid/radiozu-live.txt";
+    try{
+        const response = await fetch(url);
+
+        if(!response.ok){
+            throw new Error("Could not fetch data");
+        }
+         
+        const data = await response.text()
+        livetext.innerHTML = data;
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
+
+setInterval(fetchLiveText, 15000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let username ;
   let age ;
   let email;
   let password;
-  
+
+
+
+
+
+
+
+
   
 
 
